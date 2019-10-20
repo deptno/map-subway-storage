@@ -2,7 +2,6 @@ import React, {useCallback, useContext} from 'react'
 import {HappyBox} from '../../builder/model'
 import {MapContext} from '../../context/map'
 
-declare var kakao
 export const LiHappyBox: React.FC<Props> = props => {
   const map = useContext(MapContext)
   const move = useCallback(() => map.setCenter(new kakao.maps.LatLng(y, x)), [map])

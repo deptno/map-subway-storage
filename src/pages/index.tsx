@@ -3,7 +3,6 @@ import * as R from 'ramda'
 import {UlHappyBoxes} from '../components/ul/UlHappyBoxes'
 import {MapContext} from '../context/map'
 
-declare var kakao
 export default () => {
   const [boxes, setBoxes] = useState([])
   const [mount, setMount] = useState(false)

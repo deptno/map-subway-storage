@@ -2,7 +2,6 @@ import App from 'next/app'
 import Head from 'next/head'
 import React from 'react'
 
-
 export default class extends App {
   render() {
     const {Component, pageProps} = this.props
