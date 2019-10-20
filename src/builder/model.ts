@@ -8,7 +8,9 @@ export function toHappyBox(data: any): HappyBox {
     중형: parseInt(data.중형),
     대형: parseInt(data.대형),
     제어부: parseInt(data.제어부),
-    열: parseInt(data.열)
+    열: parseInt(data.열),
+    x: data.x,
+    y: data.y,
   }
 }
 
@@ -22,5 +24,7 @@ export type HappyBox = {
   대형: number
   제어부: number
   열: number
+  x: string
+  y: string
 }
 
