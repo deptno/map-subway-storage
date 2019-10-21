@@ -16,7 +16,7 @@ export default () => {
   }, [mount])
 
   useEffect(() => {
-    fetch('/static/json/storage.json')
+    fetch(location.pathname + 'static/json/storage.json')
       .then<any[]>(R.invoker(0, 'json'))
       .then(setBoxes)
     setMount(true)
