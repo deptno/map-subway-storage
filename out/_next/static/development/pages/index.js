@@ -16194,9 +16194,11 @@ var LiHappyBox = function LiHappyBox(props) {
       x = data.x,
       y = data.y;
   var map = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_map__WEBPACK_IMPORTED_MODULE_1__["MapContext"]);
-  var move = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(ramda__WEBPACK_IMPORTED_MODULE_2__["ifElse"](ramda__WEBPACK_IMPORTED_MODULE_2__["isNil"](map), ramda__WEBPACK_IMPORTED_MODULE_2__["always"](undefined), ramda__WEBPACK_IMPORTED_MODULE_2__["compose"](function () {
-    return map.setCenter(new kakao.maps.LatLng(y, x));
-  }, ramda__WEBPACK_IMPORTED_MODULE_2__["tap"](ramda__WEBPACK_IMPORTED_MODULE_2__["compose"](onClick, ramda__WEBPACK_IMPORTED_MODULE_2__["always"](역명))))), [map]);
+  var move = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(function () {
+    return ramda__WEBPACK_IMPORTED_MODULE_2__["ifElse"](ramda__WEBPACK_IMPORTED_MODULE_2__["isNil"], ramda__WEBPACK_IMPORTED_MODULE_2__["always"](undefined), ramda__WEBPACK_IMPORTED_MODULE_2__["compose"](function () {
+      return map.setCenter(new kakao.maps.LatLng(y, x));
+    }, ramda__WEBPACK_IMPORTED_MODULE_2__["tap"](ramda__WEBPACK_IMPORTED_MODULE_2__["compose"](onClick, ramda__WEBPACK_IMPORTED_MODULE_2__["always"](역명)))))(map);
+  }, [map]);
   var css = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(function () {
     return focus ? 'flex lh-copy bg-blue white' : 'flex lh-copy hover-bg-light-blue hover-white';
   }, [focus]);
@@ -16478,7 +16480,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     }
   }, [mount]);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    fetch('/static/json/storage.json').then(ramda__WEBPACK_IMPORTED_MODULE_1__["invoker"](0, 'json')).then(setBoxes);
+    fetch(location.pathname + 'static/json/storage.json').then(ramda__WEBPACK_IMPORTED_MODULE_1__["invoker"](0, 'json')).then(setBoxes);
     setMount(true);
   }, []);
   return __jsx(_context_map__WEBPACK_IMPORTED_MODULE_3__["MapContext"].Provider, {
