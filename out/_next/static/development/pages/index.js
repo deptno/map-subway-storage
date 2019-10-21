@@ -16194,9 +16194,9 @@ var LiHappyBox = function LiHappyBox(props) {
       x = data.x,
       y = data.y;
   var map = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_map__WEBPACK_IMPORTED_MODULE_1__["MapContext"]);
-  var move = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(ramda__WEBPACK_IMPORTED_MODULE_2__["compose"](function () {
+  var move = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(ramda__WEBPACK_IMPORTED_MODULE_2__["ifElse"](ramda__WEBPACK_IMPORTED_MODULE_2__["isNil"](map), ramda__WEBPACK_IMPORTED_MODULE_2__["always"](undefined), ramda__WEBPACK_IMPORTED_MODULE_2__["compose"](function () {
     return map.setCenter(new kakao.maps.LatLng(y, x));
-  }, ramda__WEBPACK_IMPORTED_MODULE_2__["tap"](ramda__WEBPACK_IMPORTED_MODULE_2__["compose"](onClick, ramda__WEBPACK_IMPORTED_MODULE_2__["always"](역명)))), [map]);
+  }, ramda__WEBPACK_IMPORTED_MODULE_2__["tap"](ramda__WEBPACK_IMPORTED_MODULE_2__["compose"](onClick, ramda__WEBPACK_IMPORTED_MODULE_2__["always"](역명))))), [map]);
   var css = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(function () {
     return focus ? 'flex lh-copy bg-blue white' : 'flex lh-copy hover-bg-light-blue hover-white';
   }, [focus]);
@@ -16205,70 +16205,70 @@ var LiHappyBox = function LiHappyBox(props) {
     onClick: move,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 34
     },
     __self: this
   }, __jsx("span", {
     className: "w3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 35
     },
     __self: this
   }, 호선), __jsx("span", {
     className: "w5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 36
     },
     __self: this
   }, 역명), __jsx("span", {
     className: "w-100",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 37
     },
     __self: this
   }, 위치정보), __jsx("span", {
     className: "w3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 38
     },
     __self: this
   }, 계), __jsx("span", {
     className: "w3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 39
     },
     __self: this
   }, 열), __jsx("span", {
     className: "w3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 40
     },
     __self: this
   }, 제어부), __jsx("span", {
     className: "w3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 41
     },
     __self: this
   }, 소형), __jsx("span", {
     className: "w3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 42
     },
     __self: this
   }, 중형), __jsx("span", {
     className: "w3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 43
     },
     __self: this
   }, 대형));
