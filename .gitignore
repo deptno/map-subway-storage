@@ -1,4 +1,4 @@
 .idea
 .next
 .env
-out
+node_modules
