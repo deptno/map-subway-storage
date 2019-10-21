@@ -8,12 +8,16 @@ export const LiHappyBox: React.FC<Props> = props => {
   const {호선, 역명, 위치정보, 계, 열, 제어부, 소형, 중형, 대형, x, y} = data
   const map = useContext(MapContext)
   const move = useCallback(
-    R.compose(
-      () => map.setCenter(new kakao.maps.LatLng(y, x)),
-      R.tap(
-        R.compose(
-          onClick,
-          R.always(역명),
+    R.ifElse(
+      R.isNil(map),
+      R.always(undefined),
+      R.compose(
+        () => map.setCenter(new kakao.maps.LatLng(y, x)),
+        R.tap(
+          R.compose(
+            onClick,
+            R.always(역명),
+          ),
         ),
       ),
     ),
