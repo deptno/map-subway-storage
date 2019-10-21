@@ -7,7 +7,7 @@
     "start": "next",
     "build.data": "ts-node --project src/builder/tsconfig.json src/builder/index.ts",
     "build": "next build && next export && touch out/.nojekyll && echo \"github.bglee.me/map-subway-storage\" >> out/CNAME",
-    "publish": "git add out/ && git commit -m \"deploy\" && git subtree push --prefix out origin gh-pages",
+    "publish": "git add out/ && git commit -m \"gh-pages\" && git subtree split --prefix out -b gh-pages && git push -f origin gh-pages:gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
