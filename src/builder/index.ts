@@ -22,20 +22,18 @@ fs.readdir(dirRaw, async (err, data) => {
     data
       .map(file => path.join(dirRaw, file))
       .map(load)
-      .concat(fs.mkdirp(dirJson))
+      .concat(fs.mkdirp(dirJson)),
   )
 
   const happyBoxes: HappyBox[] = R.compose(R.map(toHappyBox), joiner('역명'), R.take(2))(subways)
-
   const names = R.uniq(happyBoxes
     .map(b => b.역명.replace(/([A-z]+)$/, ''))
     .map(b => [
       b,
       b.endsWith('역')
         ? b
-        : `${b}역`
+        : `${b}역`,
     ]))
-
 
   for (const [n, nn] of names) {
     await axios
@@ -43,9 +41,9 @@ fs.readdir(dirRaw, async (err, data) => {
         encodeURI(`http://dapi.kakao.com/v2/local/search/keyword.json?category_group_code=SW8&size=1&query=${nn}`),
         {
           headers: {
-            authorization: `KakaoAK ${process.env.KEY_KAKAO}`
-          }
-        }
+            authorization: `KakaoAK ${process.env.KEY_KAKAO}`,
+          },
+        },
       )
       .then(R.compose(
         (xy) => {
@@ -56,9 +54,9 @@ fs.readdir(dirRaw, async (err, data) => {
         },
         R.pick(['x', 'y']),
         R.head,
-        R.path(['data', 'documents'])
+        R.path(['data', 'documents']),
       ))
-      .catch(({code, message}) => console.error(code, message))
+      .catch(R.compose(console.error, R.pick(['code', 'message'])))
   }
 
   fs.writeJson(fileJson, happyBoxes)
