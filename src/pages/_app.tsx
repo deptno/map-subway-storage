@@ -9,7 +9,16 @@ export default class extends App {
     return (
       <>
         <Head>
-          <title>storage</title>
+          <title>지하철 물품보관소(해피박스) 위치</title>
+          <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          />
           <link
             rel="stylesheet"
             type="text/css"

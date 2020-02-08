@@ -25,14 +25,14 @@ export const LiHappyBox: React.FC<Props> = props => {
   )
   const css = useMemo(() =>
       focus
-        ? 'flex lh-copy bg-blue white'
-        : 'flex lh-copy hover-bg-light-blue hover-white'
+        ? 'flex items-center lh-copy h2 bg-blue white'
+        : 'flex items-center lh-copy h2 hover-bg-light-blue hover-white'
     , [focus],
   )
 
   return (
     <li className={css} onClick={move}>
-      <span className="f5-ns f7 tc w3">{호선}</span>
+      <span className="f5-ns f7 tc w3 w4-ns">{호선}</span>
       <span className="f5-ns f7 tc bg-black-05 w4">{역명}</span>
       <span className="f5-ns f7 tc w-100">{위치정보}</span>
       <span className="f5-ns f7 tc bg-black-05 w3-ns w2">{계}</span>

@@ -1,6 +1,7 @@
 import React, {useEffect, useMemo, useState} from 'react'
 import {UlHappyBoxes} from '../components/ul/UlHappyBoxes'
 import {MapContext} from '../context/map'
+import {Header} from '../components/header/Header'
 
 export default () => {
   const [boxes, setBoxes] = useState([])
@@ -27,14 +28,15 @@ export default () => {
     <MapContext.Provider value={map}>
       <div className="relative">
         <div className="fixed ph3-ns w-100">
-          <h1 className="ph2 ph0-ns f5">지하철 물품보관함(해피박스) 위치</h1>
+          <Header/>
           <div className="flex" style={{height: '300px'}}>
             <div id="map" style={{width: '100%', height: '300px'}}/>
           </div>
-          <p className="ph2 pv1 br2 bg-black white">{station}</p>
+          <div className="ph3">
+            <p className="ph2 pv1 br2 bg-black white">{station}</p>
+          </div>
         </div>
-        <div className="relative" style={{height: '400px'}}/>
-        <div className="overflow-scroll w-100 ph3" style={{height: 'calc(100vh - 350px)'}}>
+        <div className="absolute overflow-scroll w-100 ph3" style={{height: 'calc(100vh - 350px)', top: '420px'}}>
           <UlHappyBoxes data={boxes} station={station} onClick={select}/>
         </div>
       </div>
