@@ -2,6 +2,8 @@ import React, {useEffect, useMemo, useState} from 'react'
 import {UlHappyBoxes} from '../components/ul/UlHappyBoxes'
 import {MapContext} from '../context/map'
 import {Header} from '../components/header/Header'
+import {seo} from '../constant'
+import {NextSeo} from 'next-seo'
 
 export default () => {
   const [boxes, setBoxes] = useState([])
@@ -26,6 +28,7 @@ export default () => {
 
   return (
     <MapContext.Provider value={map}>
+      <NextSeo {...seo}/>
       <div className="relative">
         <div className="fixed ph3-ns w-100">
           <Header/>
