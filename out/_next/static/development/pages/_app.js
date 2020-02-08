@@ -7285,23 +7285,23 @@ function createUrl(router) {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -7936,12 +7936,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -8412,12 +8412,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -10057,13 +10057,30 @@ function (_App) {
           lineNumber: 12
         },
         __self: this
-      }, "storage"), __jsx("link", {
+      }, "\uC9C0\uD558\uCCA0 \uBB3C\uD488\uBCF4\uAD00\uC18C(\uD574\uD53C\uBC15\uC2A4) \uC704\uCE58"), __jsx("meta", {
+        name: "viewport",
+        content: "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }), __jsx("link", {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }), __jsx("link", {
         rel: "stylesheet",
         type: "text/css",
         href: "https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 22
         },
         __self: this
       }), __jsx("script", {
@@ -10071,13 +10088,13 @@ function (_App) {
         src: "//dapi.kakao.com/v2/maps/sdk.js?appkey=3fa038fcb901854ff4d7ede249a974bb",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 27
         },
         __self: this
       })), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 29
         },
         __self: this
       })));
@@ -10091,14 +10108,14 @@ function (_App) {
 
 /***/ }),
 
-/***/ "dll-reference dll_13346faca0e924a89b24":
+/***/ "dll-reference dll_b35e09dc2ca94ac6d9c1":
 /*!*******************************************!*\
-  !*** external "dll_13346faca0e924a89b24" ***!
+  !*** external "dll_b35e09dc2ca94ac6d9c1" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_13346faca0e924a89b24;
+module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 

@@ -16150,12 +16150,86 @@ var zipWith = /*#__PURE__*/Object(_internal_curry3_js__WEBPACK_IMPORTED_MODULE_0
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/react/index.js");
+
+/***/ }),
+
+/***/ "./src/components/header/Header.tsx":
+/*!******************************************!*\
+  !*** ./src/components/header/Header.tsx ***!
+  \******************************************/
+/*! exports provided: Header */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Header", function() { return Header; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/bglee/workspace/src/github.com/deptno/map-subway-storage/src/components/header/Header.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+var Header = function Header(props) {
+  return __jsx("header", {
+    className: "flex f3 pa3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("h1", {
+    className: "ph2 ph0-ns f5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "\uC9C0\uD558\uCCA0 \uBB3C\uD488\uBCF4\uAD00\uD568(\uD574\uD53C\uBC15\uC2A4) \uC704\uCE58"), __jsx("div", {
+    className: "ml-auto flex items-center justify-between",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, __jsx("a", {
+    className: "link black mh3",
+    href: "https://github.com/deptno/map-subway-storage",
+    target: "_blank",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, __jsx("i", {
+    className: "fab fa-github black-70 ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  })), __jsx("a", {
+    className: "link black-70",
+    href: "http://bglee.me#map-subway-storage",
+    target: "_blank",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, __jsx("span", {
+    className: "f6 db underline b",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "about"))));
+};
 
 /***/ }),
 
@@ -16200,7 +16274,7 @@ var LiHappyBox = function LiHappyBox(props) {
     }, ramda__WEBPACK_IMPORTED_MODULE_2__["tap"](ramda__WEBPACK_IMPORTED_MODULE_2__["compose"](onClick, ramda__WEBPACK_IMPORTED_MODULE_2__["always"](역명)))))(map);
   }, [map]);
   var css = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(function () {
-    return focus ? 'flex lh-copy bg-blue white' : 'flex lh-copy hover-bg-light-blue hover-white';
+    return focus ? 'flex items-center lh-copy h2 bg-blue white' : 'flex items-center lh-copy h2 hover-bg-light-blue hover-white';
   }, [focus]);
   return __jsx("li", {
     className: css,
@@ -16211,63 +16285,63 @@ var LiHappyBox = function LiHappyBox(props) {
     },
     __self: this
   }, __jsx("span", {
-    className: "w3",
+    className: "f5-ns f7 tc w3 w4-ns",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
     },
     __self: this
   }, 호선), __jsx("span", {
-    className: "w5",
+    className: "f5-ns f7 tc bg-black-05 w4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
     },
     __self: this
   }, 역명), __jsx("span", {
-    className: "w-100",
+    className: "f5-ns f7 tc w-100",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
     },
     __self: this
   }, 위치정보), __jsx("span", {
-    className: "w3",
+    className: "f5-ns f7 tc bg-black-05 w3-ns w2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
     },
     __self: this
   }, 계), __jsx("span", {
-    className: "w3",
+    className: "f5-ns f7 tc w3-ns w2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
     },
     __self: this
   }, 열), __jsx("span", {
-    className: "w3",
+    className: "f5-ns f7 tc bg-black-05 w4-ns w2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
     },
     __self: this
   }, 제어부), __jsx("span", {
-    className: "w3",
+    className: "f5-ns f7 tc w3-ns w2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 41
     },
     __self: this
   }, 소형), __jsx("span", {
-    className: "w3",
+    className: "f5-ns f7 tc bg-black-05 w3-ns w2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42
     },
     __self: this
   }, 중형), __jsx("span", {
-    className: "w3",
+    className: "f5-ns f7 tc w3-ns w2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
@@ -16298,70 +16372,70 @@ var LiHappyBoxHeader = function LiHappyBoxHeader(props) {
     className: "flex lh-copy dib pv2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: this
   }, __jsx("span", {
-    className: "w3",
+    className: "f5-ns f7 tc w3 w4-ns",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, "\uD638\uC120"), __jsx("span", {
+    className: "f5-ns f7 tc bg-black-05 w4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
-  }, "\uD638\uC120"), __jsx("span", {
-    className: "w5",
+  }, "\uC5ED\uBA85"), __jsx("span", {
+    className: "f5-ns f7 tc w-100",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
-  }, "\uC5ED\uBA85"), __jsx("span", {
-    className: "w-100",
+  }, "\uC704\uCE58\uC815\uBCF4"), __jsx("span", {
+    className: "f5-ns f7 tc bg-black-05 w3-ns w2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
-  }, "\uC704\uCE58\uC815\uBCF4"), __jsx("span", {
-    className: "w3",
+  }, "\uACC4"), __jsx("span", {
+    className: "f5-ns f7 tc w3-ns w2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
-  }, "\uACC4"), __jsx("span", {
-    className: "w3",
+  }, "\uC5F4"), __jsx("span", {
+    className: "f5-ns f7 tc bg-black-05 w4-ns w2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
-  }, "\uC5F4"), __jsx("span", {
-    className: "w3",
+  }, "\uC81C\uC5B4\uBD80"), __jsx("span", {
+    className: "f5-ns f7 tc w3-ns w2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
-  }, "\uC81C\uC5B4\uBD80"), __jsx("span", {
-    className: "w3",
+  }, "\uC18C\uD615"), __jsx("span", {
+    className: "f5-ns f7 tc bg-black-05 w3-ns w2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
-  }, "\uC18C\uD615"), __jsx("span", {
-    className: "w3",
+  }, "\uC911\uD615"), __jsx("span", {
+    className: "f5-ns f7 tc w3-ns w2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
-    },
-    __self: this
-  }, "\uC911\uD615"), __jsx("span", {
-    className: "w3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
     },
     __self: this
   }, "\uB300\uD615"));
@@ -16391,32 +16465,31 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var UlHappyBoxes = function UlHappyBoxes(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(),
-      station = _useState[0],
-      select = _useState[1];
-
+  var data = props.data,
+      station = props.station,
+      onClick = props.onClick;
   return __jsx("ul", {
-    className: "list ph2 f6 w-100",
+    className: "list ph2 mv0 f6 w-100",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, __jsx(_li_LiHappyBoxHeader__WEBPACK_IMPORTED_MODULE_2__["LiHappyBoxHeader"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
-  }, station, __jsx(_li_LiHappyBoxHeader__WEBPACK_IMPORTED_MODULE_2__["LiHappyBoxHeader"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }), props.data.map(function (box) {
+  }), data.map(function (box) {
     return __jsx(_li_LiHappyBox__WEBPACK_IMPORTED_MODULE_1__["LiHappyBox"], {
       key: box.역명,
       data: box,
-      onClick: select,
+      onClick: onClick,
       focus: ramda__WEBPACK_IMPORTED_MODULE_3__["equals"](station, box.역명),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 12
       },
       __self: this
     });
@@ -16453,9 +16526,9 @@ var MapContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])(nul
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var ramda__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ramda */ "./node_modules/ramda/es/index.js");
-/* harmony import */ var _components_ul_UlHappyBoxes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ul/UlHappyBoxes */ "./src/components/ul/UlHappyBoxes.tsx");
-/* harmony import */ var _context_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/map */ "./src/context/map.ts");
+/* harmony import */ var _components_ul_UlHappyBoxes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ul/UlHappyBoxes */ "./src/components/ul/UlHappyBoxes.tsx");
+/* harmony import */ var _context_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../context/map */ "./src/context/map.ts");
+/* harmony import */ var _components_header_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/header/Header */ "./src/components/header/Header.tsx");
 var _jsxFileName = "/Users/bglee/workspace/src/github.com/deptno/map-subway-storage/src/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -16480,54 +16553,99 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     }
   }, [mount]);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    fetch(location.pathname + 'static/json/storage.json').then(ramda__WEBPACK_IMPORTED_MODULE_1__["invoker"](0, 'json')).then(setBoxes);
+    fetch(location.pathname + 'static/json/storage.json').then(function (response) {
+      return response.json();
+    }).then(setBoxes);
     setMount(true);
   }, []);
-  return __jsx(_context_map__WEBPACK_IMPORTED_MODULE_3__["MapContext"].Provider, {
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('역을 선택하세요.'),
+      station = _useState3[0],
+      select = _useState3[1];
+
+  return __jsx(_context_map__WEBPACK_IMPORTED_MODULE_2__["MapContext"].Provider, {
     value: map,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "ph4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
-  }, " \uC9C0\uD558\uCCA0 \uBB3C\uD488\uBCF4\uAD00\uD568 \uC704\uCE58 "), __jsx("h3", {
+  }, __jsx("div", {
+    className: "relative",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: this
-  }, " \uC9C0\uD558\uCCA0 \uD574\uD53C\uBC15\uC2A4 \uC704\uCE58 "), __jsx("div", {
-    id: "map",
-    style: {
-      width: '500px',
-      height: '400px'
-    },
+  }, __jsx("div", {
+    className: "fixed ph3-ns w-100",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: this
-  }), __jsx(_components_ul_UlHappyBoxes__WEBPACK_IMPORTED_MODULE_2__["UlHappyBoxes"], {
-    data: boxes,
+  }, __jsx(_components_header_Header__WEBPACK_IMPORTED_MODULE_3__["Header"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  })));
+  }), __jsx("div", {
+    className: "flex",
+    style: {
+      height: '300px'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, __jsx("div", {
+    id: "map",
+    style: {
+      width: '100%',
+      height: '300px'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "ph3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, __jsx("p", {
+    className: "ph2 pv1 br2 bg-black white",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, station))), __jsx("div", {
+    className: "absolute overflow-scroll w-100 ph3",
+    style: {
+      height: 'calc(100vh - 350px)',
+      top: '420px'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, __jsx(_components_ul_UlHappyBoxes__WEBPACK_IMPORTED_MODULE_1__["UlHappyBoxes"], {
+    data: boxes,
+    station: station,
+    onClick: select,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }))));
 });
 
 /***/ }),
@@ -16544,14 +16662,14 @@ module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absol
 
 /***/ }),
 
-/***/ "dll-reference dll_13346faca0e924a89b24":
+/***/ "dll-reference dll_b35e09dc2ca94ac6d9c1":
 /*!*******************************************!*\
-  !*** external "dll_13346faca0e924a89b24" ***!
+  !*** external "dll_b35e09dc2ca94ac6d9c1" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_13346faca0e924a89b24;
+module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
