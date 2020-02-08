@@ -21,14 +21,22 @@ export default () => {
     setMount(true)
   }, [])
 
+  const [station, select] = useState<string>('역을 선택하세요.')
+
   return (
     <MapContext.Provider value={map}>
-      <div className="ph4-ns">
-        <h1 className="ph2 ph0-ns f5">지하철 물품보관함(해피박스) 위치</h1>
-        <div className="flex ba bw2 b--black-70 br3">
-          <div id="map" style={{width: '100%', height: '300px'}}/>
+      <div className="relative">
+        <div className="fixed ph3-ns w-100">
+          <h1 className="ph2 ph0-ns f5">지하철 물품보관함(해피박스) 위치</h1>
+          <div className="flex" style={{height: '300px'}}>
+            <div id="map" style={{width: '100%', height: '300px'}}/>
+          </div>
+          <p className="ph2 pv1 br2 bg-black white">{station}</p>
         </div>
-        <UlHappyBoxes data={boxes}/>
+        <div className="relative" style={{height: '400px'}}/>
+        <div className="overflow-scroll w-100 ph3" style={{height: 'calc(100vh - 350px)'}}>
+          <UlHappyBoxes data={boxes} station={station} onClick={select}/>
+        </div>
       </div>
     </MapContext.Provider>
   )
