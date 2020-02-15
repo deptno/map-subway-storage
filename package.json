@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/deptno/map-subway-storage#readme",
   "dependencies": {
+    "fuse.js": "^3.4.6",
     "next": "^9.1.1",
+    "next-seo": "^4.1.0",
     "ramda": "^0.26.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
