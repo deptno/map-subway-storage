@@ -50,15 +50,33 @@ export default () => {
     ),
     [searchEngine, boxes],
   )
+  const mapHeight = 250
 
   return (
     <MapContext.Provider value={map}>
+      <style>
+        {/*language=css*/ `
+          .stations {
+            height: calc(100vh - ${mapHeight + 180}px);
+            top: ${mapHeight + 160}px;
+          }
+
+          .map-wrapper {
+            height: ${mapHeight}px;
+          }
+
+          #map {
+            width: 100%;
+            height: ${mapHeight}px;
+          }
+        `}
+      </style>
       <NextSeo {...seo}/>
       <div className="relative">
         <div className="fixed ph3-ns w-100">
           <Header/>
-          <div className="flex" style={{height: '300px'}}>
-            <div id="map" style={{width: '100%', height: '300px'}}/>
+          <div className="flex map-wrapper">
+            <div id="map"/>
           </div>
           <div className="pv3 ph3 flex items-center">
             <i className="ph2 pv1 fas fa-search blue"/>
@@ -73,11 +91,12 @@ export default () => {
             <p className="mv1 mh0 ph2 pv1 br2 bg-black white">{station}</p>
           </div>
         </div>
-        <div className="absolute overflow-scroll w-100 ph3" style={{height: 'calc(100vh - 380px)', top: '460px'}}>
+        <div className="absolute overflow-scroll w-100 ph3 stations">
           <UlHappyBoxes data={listedBoxes} station={station} onClick={select}/>
         </div>
       </div>
     </MapContext.Provider>
   )
 }
+
 

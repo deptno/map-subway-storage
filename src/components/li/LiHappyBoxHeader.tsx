@@ -2,7 +2,7 @@ import React from 'react'
 
 export const LiHappyBoxHeader: React.FC<Props> = props => {
   return (
-    <li className="flex lh-copy dib pv2">
+    <li className="flex lh-copy dib pv2 mb3">
       <span className="f5-ns f7 tc w3 w4-ns">호선</span>
       <span className="f5-ns f7 tc bg-black-05 w4">역명</span>
       <span className="f5-ns f7 tc w-100">위치정보</span>
