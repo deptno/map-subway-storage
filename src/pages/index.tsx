@@ -4,10 +4,16 @@ import {MapContext} from '../context/map'
 import {Header} from '../components/header/Header'
 import {seo} from '../constant'
 import {NextSeo} from 'next-seo'
+import {createFuse} from '../lib/fuse'
+import {always, compose, identity, ifElse, isEmpty, path, tap} from 'ramda'
+import Fuse from 'fuse.js'
+import {SubwayStorage} from '../../object'
 
 export default () => {
   const [boxes, setBoxes] = useState([])
+  const [listedBoxes, setListedBoxes] = useState(boxes)
   const [mount, setMount] = useState(false)
+  const [searchEngine, setSearchEngine] = useState<Fuse<SubwayStorage, {}>>()
   const map = useMemo(() => {
     if (mount) {
       return new kakao.maps.Map(document.getElementById('map'), {
@@ -20,15 +26,30 @@ export default () => {
   useEffect(() => {
     fetch(location.pathname + 'static/json/storage.json')
       .then(response => response.json())
+      .then(
+        tap(
+          compose(
+            setSearchEngine,
+            createFuse,
+          ),
+        ),
+      )
       .then(setBoxes)
     setMount(true)
   }, [])
+  useEffect(() => setListedBoxes(boxes), [boxes])
 
   const [station, select] = useState<string>('역을 선택하세요.')
-  const [input, setInput] = useState<string>('역을 선택하세요.')
-  const handleInput = useCallback((e) => {
-    setInput(e.target.value)
-  }, [input])
+  const placeholder = useMemo(() => searchEngine ? '검색할 역명' : '인덱싱..', [searchEngine])
+  const search = useCallback(
+    compose(
+      setListedBoxes,
+      ifElse(isEmpty, always(boxes), identity),
+      v => searchEngine.search(v),
+      path<string>(['target', 'value']),
+    ),
+    [searchEngine, boxes],
+  )
 
   return (
     <MapContext.Provider value={map}>
@@ -43,8 +64,9 @@ export default () => {
             <i className="ph2 pv1 fas fa-search blue"/>
             <input
               className="ph2 br2 ba b--black-60 lh-copy flex-auto"
-              onChange={handleInput}
-              placeholder="작업중"
+              onChange={search}
+              placeholder={placeholder}
+              disabled={!searchEngine}
             />
           </div>
           <div className="ph3">
@@ -52,9 +74,10 @@ export default () => {
           </div>
         </div>
         <div className="absolute overflow-scroll w-100 ph3" style={{height: 'calc(100vh - 380px)', top: '460px'}}>
-          <UlHappyBoxes data={boxes} station={station} onClick={select}/>
+          <UlHappyBoxes data={listedBoxes} station={station} onClick={select}/>
         </div>
       </div>
     </MapContext.Provider>
   )
 }
+
