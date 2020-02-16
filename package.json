@@ -6,7 +6,7 @@
   "scripts": {
     "start": "next",
     "build.data": "ts-node --project src/builder/tsconfig.json src/builder/index.ts",
-    "build": "rimraf out && next build && next export && touch out/.nojekyll && echo \"blog.bglee.me/map-subway-storage\ndeptno.bglee.me/map-subway-storage\" >> out/CNAME",
+    "build": "rimraf out && next build && next export && touch out/.nojekyll",
     "publish": "git add out/ && git commit -m \"gh-pages\" && git subtree push --prefix out origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
