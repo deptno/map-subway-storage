@@ -14,9 +14,10 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: npm ci
-      - run: npm build.data
-      - run: npm build
+      - if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+      - run: npm run build.data
+      - run: npm run build
       - name: deploy
         uses: peaceiris/actions-gh-pages@v2
         with:
