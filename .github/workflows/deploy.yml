@@ -1,0 +1,30 @@
+name: deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm ci
+      - run: npm build.data
+      - run: npm build
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v2
+        with:
+          forceOrphan: true
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./out
