@@ -17,6 +17,8 @@ jobs:
       - if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
       - run: npm run build.data
+        env:
+          KEY_KAKAO: ${{ secrets.KEY_KAKAO }}
       - run: npm run build
       - name: deploy
         uses: peaceiris/actions-gh-pages@v2
