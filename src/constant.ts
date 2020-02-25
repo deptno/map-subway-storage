@@ -20,3 +20,4 @@ export const seo = {
     site_name  : const_site_title,
   }
 }
+export const const_google_analytics_id = process.env.GOOGLE_ANALYTICS_ID!
