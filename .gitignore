@@ -2,3 +2,5 @@
 .next
 .env
 node_modules
+out
+public/static/json

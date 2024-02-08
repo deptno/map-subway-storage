@@ -11,3 +11,11 @@ export type SubwayStorage = {
   'x': string
   'y': string
 }
+
+
+declare global {
+  const kakao: any
+  interface Window {
+     kakao: any
+  }
+}
