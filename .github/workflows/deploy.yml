@@ -22,7 +22,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           force_orphan: true
-        env:
           github_token: ${{ secrets.ACTION_DEPLOY_KEY }}
           publish_branch: gh-pages
           publish_dir: ./out
