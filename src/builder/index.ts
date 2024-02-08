@@ -25,7 +25,7 @@ fs.readdir(dirRaw, async (err, data) => {
       .concat(fs.mkdirp(dirJson)),
   )
 
-  const happyBoxes: HappyBox[] = R.compose(R.map(toHappyBox), joiner('역명'), R.take(2))(subways)
+  const happyBoxes: HappyBox[] = R.compose(R.map(toHappyBox), joiner('보관함명'), R.take(2))(subways)
   const names = R.uniq(happyBoxes
     .map(b => b.역명.replace(/([A-z]+)$/, ''))
     .map(b => [
@@ -36,9 +36,12 @@ fs.readdir(dirRaw, async (err, data) => {
     ]))
 
   for (const [n, nn] of names) {
+    const nnn = nn.replace(/\d{1,3}~\d{1,3}/, '')
+    console.log(`${n} -> ${nnn}`)
+
     await axios
       .get(
-        encodeURI(`http://dapi.kakao.com/v2/local/search/keyword.json?category_group_code=SW8&size=1&query=${nn}`),
+        encodeURI(`http://dapi.kakao.com/v2/local/search/keyword.json?category_group_code=SW8&size=1&query=${nnn}`),
         {
           headers: {
             authorization: `KakaoAK ${process.env.KEY_KAKAO}`,
@@ -47,7 +50,6 @@ fs.readdir(dirRaw, async (err, data) => {
       )
       .then(R.compose(
         (xy) => {
-          console.log(n)
           happyBoxes
             .filter(b => b.역명.startsWith(n))
             .forEach(b => Object.assign(b, xy))
