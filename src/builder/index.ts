@@ -9,7 +9,7 @@ import axios from 'axios'
 
 config()
 
-const dirRaw = 'raw'
+const dirRaw = 'raw/20231031'
 const dirJson = 'public/static/json'
 const fileJson = `${dirJson}/storage.json`
 
