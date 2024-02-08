@@ -5,7 +5,7 @@ import * as R from 'ramda'
 
 export const LiHappyBox: React.FC<Props> = props => {
   const {data, focus, onClick} = props
-  const {호선, 역명, 위치정보, 계, 열, 제어부, 소형, 중형, 대형, x, y} = data
+  const {호선, 역명, 위치정보, 열, 제어부, 소형, 중형, 대형, x, y} = data
   const map = useContext(MapContext)
   const move = useCallback(() =>
       R.ifElse(
@@ -51,7 +51,6 @@ export const LiHappyBox: React.FC<Props> = props => {
       <span className="f5-ns f7 tc w3 w4-ns">{호선}</span>
       <span className="f5-ns f7 tc bg-black-05 w4">{역명}</span>
       <span className="f5-ns f7 w-100 ">{위치정보}</span>
-      <span className="f5-ns f7 tc bg-black-05 w3-ns w2">{계}</span>
       <span className="f5-ns f7 tc w3-ns w2">{열}</span>
       <span className="f5-ns f7 tc bg-black-05 w4-ns w2">{제어부}</span>
       <span className="f5-ns f7 tc w3-ns w2">{소형}</span>

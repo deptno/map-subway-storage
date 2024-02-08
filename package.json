@@ -4,9 +4,10 @@
   "description": "subway storage map",
   "main": "index.js",
   "scripts": {
+    "dev": "next dev",
     "start": "next",
     "build.data": "ts-node --project src/builder/tsconfig.json src/builder/index.ts",
-    "build": "rimraf out && next build && next export && touch out/.nojekyll",
+    "build": "rimraf out && next build && touch out/.nojekyll",
     "publish": "git add out/ && git commit -m \"gh-pages\" && git subtree push --prefix out origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,24 +25,24 @@
   },
   "homepage": "https://github.com/deptno/map-subway-storage#readme",
   "dependencies": {
-    "@types/ramda": "^0.26.41",
-    "fuse.js": "^3.4.6",
-    "next": "^9.2.1",
-    "next-seo": "^4.1.0",
+    "@types/ramda": "^0.26.44",
+    "axios": "^1.6.7",
+    "fuse.js": "^3.6.1",
+    "next": "^14.1.0",
+    "next-seo": "^4.29.0",
     "ramda": "^0.26.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^12.12.27",
-    "@types/react": "^16.9.19",
-    "axios": "^0.19.2",
-    "csv-parser": "^2.3.2",
-    "dotenv": "^8.2.0",
-    "fs-extra": "^8.1.0",
-    "iconv-lite": "^0.5.1",
-    "rimraf": "^3.0.2",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.7.5"
+    "@types/node": "^20.11.16",
+    "@types/react": "^16.14.56",
+    "csv-parser": "^2.3.5",
+    "dotenv": "^16.4.1",
+    "fs-extra": "^11.2.0",
+    "iconv-lite": "^0.6.3",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }

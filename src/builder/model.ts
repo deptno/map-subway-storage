@@ -1,9 +1,8 @@
 export function toHappyBox(data: any): HappyBox {
   return {
     호선: data.호선,
-    역명: data.역명,
-    위치정보: data.위치정보,
-    계: parseInt(data.계),
+    역명: data.보관함명,
+    위치정보: data.상세위치,
     소형: parseInt(data.소형),
     중형: parseInt(data.중형),
     대형: parseInt(data.대형),
@@ -18,7 +17,6 @@ export type HappyBox = {
   호선: string
   역명: string
   위치정보: string
-  계: number
   소형: number
   중형: number
   대형: number
@@ -27,4 +25,3 @@ export type HappyBox = {
   x: string
   y: string
 }
-
