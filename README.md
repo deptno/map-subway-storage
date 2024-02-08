@@ -14,4 +14,10 @@ npm run publish
 ```
 
 ## 참조
-- [지하철 물품 보관함 위치 데이터](https://www.data.go.kr/dataset/15003124/fileData.do)
+- 지하철 물품 보관함 위치 데이터 2024-02-08
+  - https://www.data.go.kr/data/15044234/fileData.do
+  - https://www.data.go.kr/data/15044235/fileData.do
+
+## 업데이트 내역
+- 2020-02-25
+- 2024-02-08
