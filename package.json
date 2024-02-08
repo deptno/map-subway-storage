@@ -4,6 +4,7 @@
   "description": "subway storage map",
   "main": "index.js",
   "scripts": {
+    "dev": "next dev",
     "start": "next",
     "build.data": "ts-node --project src/builder/tsconfig.json src/builder/index.ts",
     "build": "rimraf out && next build && touch out/.nojekyll",
