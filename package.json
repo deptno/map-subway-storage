@@ -8,7 +8,7 @@
     "start": "next",
     "build.data": "ts-node --project src/builder/tsconfig.json src/builder/index.ts",
     "build": "rimraf out && next build && touch out/.nojekyll",
-    "publish": "git add out/ && git commit -m \"gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "publish": "git add -f out/ && git commit -m \"gh-pages\" && git subtree push -f --prefix out origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

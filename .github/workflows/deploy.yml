@@ -7,19 +7,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
-      - run: npm run build.data
+      - uses: actions/checkout@v4
+      - run: pnpm install
+      - run: pnpm run build.data
         env:
           KEY_KAKAO: ${{ secrets.KEY_KAKAO }}
-      - run: npm run build
+      - run: pnpm run build
         env:
           GOOGLE_ANALYTICS_ID: UA-159081219-1
       - name: deploy
