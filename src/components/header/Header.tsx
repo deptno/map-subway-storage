@@ -1,5 +1,4 @@
 import React, {FunctionComponent} from 'react'
-import Link from 'next/link'
 
 export const Header: FunctionComponent<Props> = props => {
   return (
@@ -9,7 +8,7 @@ export const Header: FunctionComponent<Props> = props => {
         <a className="link black mh3" href="https://github.com/deptno/map-subway-storage" target="_blank">
           <i className="fab fa-github black-70 "/>
         </a>
-        <a className="link black-70" href="http://bglee.me#map-subway-storage" target="_blank">
+        <a className="link black-70" href="http://deptno.github.io" target="_blank">
         <span className="f6 db underline b">
           about
         </span>
