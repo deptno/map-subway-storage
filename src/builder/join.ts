@@ -1,27 +1,28 @@
 import * as R from 'ramda'
+const RR: any = R
 
 function join<T = any>(fk: string, dataList: (T[])[]) {
-  const lengthList = dataList.map<number>(R.length)
+  const lengthList = dataList.map<number>(RR.length)
   const longest = Math.max(...lengthList)
-  const longIndex = lengthList.findIndex(R.equals(longest))
+  const longIndex = lengthList.findIndex(RR.equals(longest))
   const driver = dataList[longIndex]
   const others = dataList
     .slice(0, longIndex)
     .concat(dataList.slice(longIndex + 1, dataList.length))
   const joined = driver.map((d: any) =>
     others.map(
-      R.compose(
-        R.merge(d),
-        R.find(R.propEq(fk, d[fk]))
+      RR.compose(
+        RR.merge(d),
+        RR.find(RR.propEq(fk, d[fk]))
       )
     )
   )
 
-  return R.o(
-    R.filter(R.prop('호선')),
-    R.flatten,
+  return RR.o(
+    RR.filter(RR.prop('호선')),
+    RR.flatten,
     joined
   )
 }
 
-export const joiner = R.curryN(2, join)
+export const joiner = RR.curryN(2, join)
