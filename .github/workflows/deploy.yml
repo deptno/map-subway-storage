@@ -17,7 +17,7 @@ jobs:
           KEY_KAKAO: ${{ secrets.KEY_KAKAO }}
       - run: pnpm run build
         env:
-          GOOGLE_ANALYTICS_ID: UA-159081219-1
+          GOOGLE_ANALYTICS_ID: G-QKL40848FW
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
